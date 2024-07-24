@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
-import { NextRequest } from "next/server";
+
 
 export const middleware = (req) => {
+	console.log("🚀 ~ middleware ~ req:", req)
 	const token = req.cookies.get("token")?.value;
 	console.log("🚀 ~ middleware ~ token:", token);
 	const url = req.nextUrl;
