@@ -3,7 +3,9 @@ import { NextRequest } from "next/server";
 
 export const middleware = (req) => {
 	const token = req.cookies.get("token")?.value;
+	console.log("🚀 ~ middleware ~ token:", token);
 	const url = req.nextUrl;
+	console.log("🚀 ~ middleware ~ url:", url);
 
 	if (
 		token &&
@@ -11,6 +13,7 @@ export const middleware = (req) => {
 			url.pathname.startsWith("/signup") ||
 			url.pathname === "/")
 	) {
+		console.log("redirect to upload");
 		return NextResponse.redirect(new URL("/upload", req.url));
 	}
 
@@ -18,6 +21,8 @@ export const middleware = (req) => {
 		!token &&
 		(url.pathname.startsWith("/upload") || url.pathname.startsWith("/profile"))
 	) {
+		console.log("back to login");
+
 		return NextResponse.redirect(new URL("/login", req.url));
 	}
 
