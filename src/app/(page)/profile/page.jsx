@@ -152,7 +152,7 @@ const Profile = () => {
 												<SheetTitle>Edit profile</SheetTitle>
 												<SheetDescription>
 													Make changes to your profile here. Click save when
-													you're done.
+													you&apos;re done.
 												</SheetDescription>
 											</SheetHeader>
 											<div className="grid gap-4 py-4">
@@ -192,7 +192,7 @@ const Profile = () => {
 										</SheetContent>
 									</Sheet>
 								</div>
-								
+
 								<div className="w-full h-full  rounded-full overflow-hidden">
 									<Image
 										priority
@@ -226,7 +226,7 @@ const Profile = () => {
 											<SheetTitle>Edit password</SheetTitle>
 											<SheetDescription>
 												Make changes to your password here. Click save when
-												you're done.
+												you&apos;re done.
 											</SheetDescription>
 										</SheetHeader>
 										<div className="grid gap-4 py-4">
