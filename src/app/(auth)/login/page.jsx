@@ -44,7 +44,7 @@ const Login = () => {
 			await response;
 			navigate.replace("/upload");
 			getUserFnc();
-			navigate.refresh();
+			// navigate.refresh();
 		} catch (err) {}
 	};
 

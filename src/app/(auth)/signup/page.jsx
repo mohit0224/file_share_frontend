@@ -40,7 +40,6 @@ const Signup = () => {
 				error: (err) => err.response.data.message,
 			});
 			await signResponse;
-
 			navigate.replace("/login");
 		} catch (err) {}
 	};
