@@ -3,7 +3,7 @@ module.exports = {
 		return [
 			{
 				source: "/api/:path*",
-				destination: "https://file-share-backend-phi.vercel.app/:path*",
+				dest: "https://file-share-backend-phi.vercel.app/:path*",
 			},
 		];
 	},
