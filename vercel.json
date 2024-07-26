@@ -1,0 +1,10 @@
+{
+	"version": 2,
+	"builds": [{ "src": "next.config.js", "use": "@vercel/next" }],
+	"rewrites": [
+		{
+			"source": "/api/v1/(.*)",
+			"destination": "https://file-share-backend-phi.vercel.app/api/v1/$1"
+		}
+	]
+}
