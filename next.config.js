@@ -2,8 +2,8 @@ module.exports = {
 	async rewrites() {
 		return [
 			{
-				source: "/api/:path*",
-				dest: "https://file-share-backend-phi.vercel.app/:path*",
+				source: "/api/v1/:path*",
+				destination: "https://file-share-backend-phi.vercel.app/:path*",
 			},
 		];
 	},
