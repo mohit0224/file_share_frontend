@@ -381,7 +381,10 @@ const Profile = () => {
 											</button>
 
 											<Link
-												href={`${baseURL}/shareable-link/${file._id}`}
+												href={`${
+													file.isFileShareable &&
+													`${baseURL}/shareable-link/${file._id}`
+												}`}
 												className="text-violet-500"
 												target="_blank"
 											>
@@ -409,6 +412,7 @@ const Profile = () => {
 											</Link>
 
 											<button
+												disabled={!file.isFileShareable}
 												className="text-rose-500"
 												onClick={() => handleShare(file._id)}
 											>
